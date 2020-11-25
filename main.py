@@ -80,7 +80,7 @@ tf_rep = prepare(onnx_model, strict = False)
 path = './trained_models/pose.pb'
 
 file = open(path, "wb")
-file.write(output.graph.as_graph_def().SerializeToString())
+file.write(tf_rep.graph.as_graph_def().SerializeToString())
 file.close()
 
       
